@@ -758,6 +758,10 @@ svg{
   margin-top: 3rem;
 }
 
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
 .block{
   display: block;
 }
@@ -784,6 +788,22 @@ svg{
 
 .h-\[130vh\]{
   height: 130vh;
+}
+
+.h-\[200vh\]{
+  height: 200vh;
+}
+
+.h-\[100rem\]{
+  height: 100rem;
+}
+
+.h-\[200rem\]{
+  height: 200rem;
+}
+
+.h-\[180rem\]{
+  height: 180rem;
 }
 
 .w-\[95\%\]{
@@ -910,4 +930,10 @@ svg{
 :is(.dark .dark\:text-Light-Grayish-Blue){
   --tw-text-opacity: 1;
   color: hsl(227 47% 96% / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px){
+  .sm\:h-\[130vh\]{
+    height: 130vh;
+  }
 }
