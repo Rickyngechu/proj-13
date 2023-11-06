@@ -19,7 +19,54 @@
     font-family: "Inter", sans-serif;
     font-weight: 400;
   }
+  svg {
+    @apply inline-block;
+  }
 }
 
 @layer components {
+  .social {
+    @apply bg-Dark-Desaturated-Blue rounded-lg hover:bg-Dark-Desaturated-Blue2 hover:cursor-pointer hover:transition-all;
+  }
+  .social-main {
+    @apply text-center py-6;
+  }
+
+  .social-main ul {
+    @apply flex flex-col gap-5;
+  }
+
+  .number {
+    @apply text-6xl block font-bold text-White;
+  }
+
+  .user {
+    @apply text-Desaturated-Blue font-bold;
+  }
+  .followers {
+    @apply text-Dark-Grayish-Blue uppercase tracking-[4px] font-normal text-sm;
+  }
+
+  /* For the increase text */
+  .increase {
+    @apply text-Toggle2;
+  }
+  /* For the decrease text */
+  .decrease {
+    @apply text-Bright-Red;
+  }
+
+  .social-dash {
+    @apply flex flex-col gap-5 p-4;
+  }
+  .social-dash-sub {
+    @apply flex justify-between items-center;
+  }
+
+  .sub-head {
+    @apply text-Dark-Grayish-Blue font-bold;
+  }
+  .num {
+    @apply font-bold text-3xl text-White;
+  }
 }

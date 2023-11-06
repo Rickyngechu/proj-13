@@ -1,8 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: ["./*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        // Simple 4 column grid
+        4: "repeat(auto-fit, minmax(15rem, 1fr))",
+      },
+    },
     colors: {
       "Lime-Green": "hsl(163, 72%, 41%)",
       "Bright-Red": "hsl(356, 69%, 56%)",
@@ -19,15 +24,15 @@ module.exports = {
       Toggle: "hsl(230, 22%, 74%)",
 
       "Very-Dark-Blue": "hsl(230, 17%, 14%)",
-      "Very-Dark-Blue2 ": "hsl(232, 19%, 15%)",
+      "Very-Dark-Blue-sub": "hsl(232, 19%, 15%)",
       "Dark-Desaturated-Blue": "hsl(228, 28%, 20%)",
       "Desaturated-Blue": "hsl(228, 34%, 66%)",
       White: "hsl(0, 0%, 100%)",
+      "Dark-Desaturated-Blue2": "hsl(228, 28%, 30%)",
 
       "Very-Pale-Blue": "hsl(225, 100%, 98%)",
       "Light-Grayish-Blue": "hsl(227, 47%, 96%)",
       "Dark-Grayish-Blue": "hsl(228, 12%, 44%)",
-      "Very-Dark-Blue": "hsl(230, 17%, 14%)",
     },
   },
   plugins: [],
