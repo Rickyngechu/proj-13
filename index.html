@@ -22,24 +22,32 @@
   </style> -->
   </head>
   <body>
-    <div class="header h-[120vh] bg-Very-Dark-Blue">
+    <div class="header h-[130vh] dark:bg-Very-Dark-Blue bg-White">
       <div
-        class="sub-header h-52 bg-Very-Dark-Blue-sub rounded-br-2xl rounded-bl-2xl"
+        class="sub-header h-52 dark:bg-Very-Dark-Blue-sub bg-Very-Pale-Blue rounded-br-2xl rounded-bl-2xl"
       >
         <div class="cont max-w-[120rem] w-[95%] mx-auto">
           <div class="dashboard flex flex-col gap-8">
-            <div class="dashboard-head flex justify-between mt-12">
+            <div class="dashboard-head flex justify-between mt-12 items-center">
               <h1 class="main-heading">
-                <span>Social Media Dashboard</span>
+                <span
+                  class="block font-bold text-4xl dark:text-Light-Grayish-Blue text-Very-Dark-Blue"
+                  >Social Media Dashboard</span
+                >
 
-                <span>Total Followers: 23,004</span>
+                <span class="dark:text-Dark-Grayish-Blue text-Dark-Grayish-Blue"
+                  >Total Followers: 23,004</span
+                >
               </h1>
 
-              <div class="toggle">
-                <label for="type">Dark Mode</label>
-                <input type="checkbox" name="type" id="type" />
-                <span></span>
-              </div>
+              <label class="toggle">
+                <span
+                  class="toggle-label dark:text-Light-Grayish-Blue text-Very-Dark-Blue"
+                  >Dark Mode</span
+                >
+                <input class="toggle-checkbox" type="checkbox" checked />
+                <div class="toggle-switch"></div>
+              </label>
             </div>
 
             <div class="dashboard-socials-main grid grid-cols-4 gap-12">
@@ -213,7 +221,9 @@
               </div>
             </div>
 
-            <p class="text text-3xl font-bold text-Light-Grayish-Blue">
+            <p
+              class="text text-3xl font-bold dark:text-Light-Grayish-Blue text-Very-Dark-Blue"
+            >
               Overview &mdash; Today
             </p>
 
@@ -537,5 +547,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
+
+    <script src="script.js"></script>
   </body>
 </html>

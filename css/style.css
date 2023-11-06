@@ -26,7 +26,7 @@
 
 @layer components {
   .social {
-    @apply bg-Dark-Desaturated-Blue rounded-lg hover:bg-Dark-Desaturated-Blue2 hover:cursor-pointer hover:transition-all;
+    @apply dark:bg-Dark-Desaturated-Blue bg-Light-Grayish-Blue rounded-lg hover:bg-Dark-Desaturated-Blue2 hover:cursor-pointer hover:transition-all;
   }
   .social-main {
     @apply text-center py-6;
@@ -37,14 +37,14 @@
   }
 
   .number {
-    @apply text-6xl block font-bold text-White;
+    @apply text-6xl block font-bold dark:text-Light-Grayish-Blue text-Very-Dark-Blue;
   }
 
   .user {
-    @apply text-Desaturated-Blue font-bold;
+    @apply dark:text-Dark-Grayish-Blue text-Dark-Grayish-Blue font-bold;
   }
   .followers {
-    @apply text-Dark-Grayish-Blue uppercase tracking-[4px] font-normal text-sm;
+    @apply dark:text-Dark-Grayish-Blue text-Dark-Grayish-Blue uppercase tracking-[4px] font-normal text-sm;
   }
 
   /* For the increase text */
@@ -67,6 +67,70 @@
     @apply text-Dark-Grayish-Blue font-bold;
   }
   .num {
-    @apply font-bold text-3xl text-White;
+    @apply font-bold text-3xl dark:text-Light-Grayish-Blue text-Very-Dark-Blue;
+  }
+
+  /* The toggle button */
+  .toggle {
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .toggle-switch {
+    display: inline-block;
+    background-image: linear-gradient(
+      to left,
+      hsl(146, 68%, 55%),
+      hsl(210, 78%, 56%)
+    );
+    border-radius: 16px;
+    width: 58px;
+    height: 28px;
+    position: relative;
+    vertical-align: middle;
+    transition: background 0.25s;
+  }
+  .toggle-switch:before,
+  .toggle-switch:after {
+    content: "";
+  }
+  .toggle-switch:before {
+    display: block;
+    /* background: linear-gradient(to bottom, #fff 0%, #eee 100%); */
+    background-color: hsl(230, 17%, 14%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s;
+  }
+  /* .toggle:hover .toggle-switch:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  } */
+  .toggle-checkbox:checked + .toggle-switch {
+    background-image: linear-gradient(
+      to left,
+      hsl(210, 78%, 56%),
+      hsl(146, 68%, 55%)
+    );
+  }
+  .toggle-checkbox:checked + .toggle-switch:before {
+    left: 30px;
+    background-color: #fff;
+  }
+
+  .toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .toggle-label {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
   }
 }
